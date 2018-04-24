@@ -1,3 +1,36 @@
+"""Day 1: Interquartile Range
+https://www.hackerrank.com/challenges/s10-interquartile-range/problem
+
+The interquartile range of an array is the difference between its first (Q1) and third (Q3) quartiles
+(i.e., Q3-Q1).
+
+Given an array, X, of n integers and an array, F, representing the respective frequencies of X's elements,
+construct a data set, S, where each x occurs at frequency .
+Then calculate and print S's interquartile range, rounded to a scale of  decimal place (i.e.,  format).
+
+Tip: Be careful to not use integer division when averaging the middle two elements for a data set
+with an even number of elements, and be sure to not include the median in your upper and lower data sets.
+
+Input Format
+
+The first line contains an integer, , denoting the number of elements in arrays  and .
+The second line contains  space-separated integers describing the respective elements of array .
+The third line contains  space-separated integers describing the respective elements of array .
+
+Output Format
+
+Print the interquartile range for the expanded data set on a new line.
+Round your answer to a scale of  decimal place (i.e.,  format).
+
+Sample Input
+6
+6 12 8 10 20 16
+5 4 3 2 1 5
+
+Sample Output
+9.0
+"""
+
 x = [6, 12, 8, 10, 20, 16]
 f = [5, 4, 3, 2, 1, 5]
 

@@ -1,3 +1,34 @@
+"""Day 1: Quartiles
+https://www.hackerrank.com/challenges/s10-quartiles/problem
+
+Task
+Given an array, X, of n integers,
+calculate the respective first quartile (), second quartile (), and third quartile ().
+It is guaranteed that Q1, Q2, and Q3
+ are integers.
+
+Input Format
+The first line contains an integer, , denoting the number of elements in the array.
+The second line contains  space-separated integers describing the array's elements.
+
+Output Format
+Print  lines of output in the following order:
+
+The first line should be the value of Q1.
+The second line should be the value of Q2.
+The third line should be the value of Q3.
+
+Sample Input
+9
+3 7 8 5 12 14 21 13 18
+
+Sample Output
+6
+12
+16
+"""
+
+
 x = [1, 3, 5, 7, 8, 12, 13, 14, 18, 21]
 
 def median(x):

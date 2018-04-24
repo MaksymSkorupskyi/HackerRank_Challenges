@@ -1,4 +1,7 @@
-"""A manufacturer of metal pistons finds that, on average,
+"""Day 4: Binomial Distribution II
+https://www.hackerrank.com/challenges/s10-binomial-distribution-2/problem
+
+A manufacturer of metal pistons finds that, on average,
 12% of the pistons they manufacture are rejected because they are incorrectly sized.
 What is the probability that a batch of 10 pistons will contain:
 1) No more than 2 rejects?
@@ -6,13 +9,16 @@ What is the probability that a batch of 10 pistons will contain:
 """
 
 def factorial(n):
-    return 1 if n < 2 else n * factorial(n-1)
+    return 1 if n < 2 else n * factorial(n - 1)
+
 
 def binomial_coefficient(n, k):
     return factorial(n) / (factorial(k) * factorial(n - k))
 
+
 def binomial_distribution_exact(k, n, p): # = k
     return binomial_coefficient(n, k) * (p ** k) * ((1 - p) ** (n - k))
+
 
 def binomial_distribution_at_least(k, n, p): # >= k
     binomial_distribution = 0

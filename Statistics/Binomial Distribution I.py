@@ -1,8 +1,26 @@
+"""Day 4: Binomial Distribution I
+https://www.hackerrank.com/challenges/s10-binomial-distribution-1/problem
+
+The ratio of boys to girls for babies born in Ukraine is 1,09 : 1.
+If there is 1 child born per birth,
+what proportion of Ukrainian families with exactly 6 children will have at least 3 boys?
+
+Input Format
+
+A single line containing the following values:
+1.09 1
+
+Output Format
+
+Print a single line denoting the answer, rounded to a scale of  decimal places (i.e., 1.234 format).
+"""
+
+
 def factorial(n):
     if n < 2:
         return 1
     else:
-        return n * factorial(n-1)
+        return n * factorial(n - 1)
 
 """The ratio of boys to girls for babies born in Ukraine is 1.09 : 1. 
 If there is 1 child born per birth, 
