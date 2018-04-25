@@ -17,15 +17,14 @@ class Node:
 
 class Solution:
     def insert(self, root, data):
-        if root is None:
+        if not root:
             return Node(data)
+        if data <= root.data:
+            cur = self.insert(root.left, data)
+            root.left = cur
         else:
-            if data <= root.data:
-                cur = self.insert(root.left, data)
-                root.left = cur
-            else:
-                cur = self.insert(root.right, data)
-                root.right = cur
+            cur = self.insert(root.right, data)
+            root.right = cur
         return root
 
     def getHeight(self, root):
@@ -33,22 +32,19 @@ class Solution:
             return -1
         return 1 + max(self.getHeight(root.left), self.getHeight(root.right))
 
-    # def getHeight(self, root):
-    #     if root is None:
-    #         return 0
-    #     else:
-    #         lheight = self.getHeight(root.left)
-    #         rheight = self.getHeight(root.right)
-    #         if lheight > rheight:
-    #             if root.left is not None:
-    #                 return lheight + 1
-    #             else:
-    #                 return lheight
-    #         else:
-    #             if root.right is not None:
-    #                 return rheight + 1
-    #             else:
-    #                 return rheight
+    def getHeight(self, root):
+        if root is None:
+            return 0
+        lheight = self.getHeight(root.left)
+        rheight = self.getHeight(root.right)
+        if lheight > rheight:
+            if root.left:
+                return lheight + 1
+            return lheight
+        else:
+            if root.right:
+                return rheight + 1
+            return rheight
 
 T = 7
 arr = [3, 5, 2, 1, 4, 6, 7]

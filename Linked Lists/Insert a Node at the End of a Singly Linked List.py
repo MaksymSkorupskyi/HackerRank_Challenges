@@ -7,20 +7,21 @@ class Node:
         self.data = data
         self.next = None
 
+
 class Solution:
     def display(self, head):
         current = head
         while current:
             print(current.data, end=' ')
             current = current.next
-    def insert(self, head, data):
-        if not head: # null - initial list is empty
-            head = Node(data) # create a first node
-        else:
-            cur_node = head
-            while cur_node.next:
-                cur_node = cur_node.next
-            cur_node.next = Node(data) # create a new node
+
+    def insert(self, head, data): # insert new node at the end
+        if not head: # if initial list is empty
+            return Node(data) # create a first node
+        cur_node = head
+        while cur_node.next: # seeking last node
+            cur_node = cur_node.next
+        cur_node.next = Node(data) # create a new node
         return head
 
 
