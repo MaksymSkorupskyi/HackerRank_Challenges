@@ -1,4 +1,4 @@
 # HackerRank_Challenges
-HackerRank Challenges (93)
+HackerRank Challenges (96)
 
 https://www.hackerrank.com/maxnrg
