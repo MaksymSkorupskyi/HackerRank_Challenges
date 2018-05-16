@@ -9,6 +9,7 @@ Note: If possible, try to come up with a O(√n) primality algorithm,
 or see what sort of optimizations you come up with for an  algorithm.
 """
 
+
 def isprime(self):
     if self <= 1:
         return False
@@ -26,8 +27,6 @@ for i in range(int(input())):
     else:
         print('Not prime')
 
-
-
 # my first code - very straightforward :)
 # def isprime(self):
 #     if self <= 1:
@@ -36,7 +35,7 @@ for i in range(int(input())):
 #         print('Prime')
 #     else:
 #         for i in range(2, round(self ** 0.5) + 1):
-#             if self % i == 0:
+#             if self % i == 0:d
 #                 print('Not prime')
 #                 return
 #         print('Prime')
