@@ -14,6 +14,6 @@ def factorial(n):
 
 
 if __name__ == "__main__":
-    n = int(input().strip())
+    n = int(input('Enter a number: ').strip())
     result = factorial(n)
     print(result)
