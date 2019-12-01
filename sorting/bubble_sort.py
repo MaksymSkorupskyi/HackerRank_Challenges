@@ -16,14 +16,18 @@ bubble_sort([]) -> []
 """
 
 
-def bubble_sort(a):
+def bubble_sort(a: list):
+    """ Bubble Sort """
+    # We set unsorted to True so the loop looks runs at least once
     unsorted = True
     passnum = len(a) - 1
     while unsorted:
         unsorted = False
         for i in range(passnum):
-            if a[i] > a[i+1]:
-                a[i], a[i+1] = a[i+1], a[i]
+            if a[i] > a[i + 1]:
+                # Swap the elements
+                a[i], a[i + 1] = a[i + 1], a[i]
+                # Set the flag to True so we'll loop again
                 unsorted = True
         passnum -= 1
     return a
@@ -35,21 +39,20 @@ a = list(map(int, input().strip().split(' ')))
 
 while True:
     noSwaps = True
-    for i in range(len(a)-1):
-        if a[i] > a[i+1]:
-            a[i], a[i+1] = a[i+1], a[i]
+    for i in range(len(a) - 1):
+        if a[i] > a[i + 1]:
+            a[i], a[i + 1] = a[i + 1], a[i]
             noSwaps = False
     if noSwaps:
         break
 
 # if you need to know number of swaps:
-
 numSwaps = 0
 while True:
     noSwaps = True
-    for i in range(len(a)-1):
-        if a[i] > a[i+1]:
-            a[i], a[i+1] = a[i+1], a[i]
+    for i in range(len(a) - 1):
+        if a[i] > a[i + 1]:
+            a[i], a[i + 1] = a[i + 1], a[i]
             numSwaps += 1
             noSwaps = False
     if noSwaps:
