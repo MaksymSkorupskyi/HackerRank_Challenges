@@ -1,4 +1,5 @@
 # https://www.hackerrank.com/challenges/ctci-fibonacci-numbers/problem
+from functools import lru_cache
 
 
 # v1: cycle, fast
@@ -21,14 +22,17 @@ def fibonacci(n):
 # v3: recursion, optimized
 def fibonacci(n):
     if n > 1:
-        return fibonacci(n - 1) + fibonacci(n -2)
+        return fibonacci(n - 1) + fibonacci(n - 2)
     return n
 
+
 # v4: recursion, optimized
+@lru_cache(maxsize=None)
 def fibonacci(n):
     if n <= 1:
         return n
-    return fibonacci(n - 1) + fibonacci(n -2)
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
 
 # generator
 # def fibonacci(n):
@@ -36,7 +40,6 @@ def fibonacci(n):
 #     while a < n:
 #         yield a
 #         a, b = b, a + b
-
 
 
 n = int(input())

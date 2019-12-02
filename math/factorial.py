@@ -3,10 +3,10 @@ def factorial(n):
         return 1
     return n * factorial(n - 1)
 
-#one-liner:
+
+# one-liner:
 def factorial(n):
     return 1 if n < 2 else n * factorial(n - 1)
-
 
 # for i in range(11):
 #     print(factorial(i))

@@ -23,6 +23,7 @@ Output
 
 import os
 
+
 def aVeryBigSum(n, ar):
     return sum(ar)
 
