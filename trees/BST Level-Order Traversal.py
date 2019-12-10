@@ -10,10 +10,13 @@ of the binary search tree.
 
 Hint: You'll find a queue helpful in completing this challenge.
 """
+
+
 class Node:
     def __init__(self, data):
         self.right = self.left = None
         self.data = data
+
 
 class Solution:
     def insert(self, root, data):
@@ -35,8 +38,8 @@ class Solution:
         if not root:
             return None
         res = []
-        nodes = [root] # enqueue current root
-        while nodes: # while there are nodes to process
+        nodes = [root]  # enqueue current root
+        while nodes:  # while there are nodes to process
             next_nodes = []
             for node in nodes:
                 res.append(node.data)
@@ -58,5 +61,3 @@ for i in range(T):
     # root = myTree.insert(root, data)
     root = myTree.insert(root, arr[i])
 myTree.levelOrder(root)
-
-

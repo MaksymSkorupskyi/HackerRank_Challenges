@@ -1,4 +1,4 @@
-"""Day 24 - Linked Lists - removeDuplicates()
+"""Day 24 - linked_lists - removeDuplicates()
 
 https://www.hackerrank.com/challenges/30-linked-list-deletion/problem
 

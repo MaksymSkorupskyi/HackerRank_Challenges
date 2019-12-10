@@ -46,6 +46,7 @@ class Solution:
                 return rheight + 1
             return rheight
 
+
 T = 7
 arr = [3, 5, 2, 1, 4, 6, 7]
 myTree = Solution()
