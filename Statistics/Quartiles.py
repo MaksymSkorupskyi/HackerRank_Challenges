@@ -12,7 +12,7 @@ The first line contains an integer, , denoting the number of elements in the arr
 The second line contains  space-separated integers describing the array's elements.
 
 Output Format
-Print  lines of output in the following order:
+Print  lines.py of output in the following order:
 
 The first line should be the value of Q1.
 The second line should be the value of Q2.
