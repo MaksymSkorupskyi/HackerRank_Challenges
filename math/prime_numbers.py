@@ -18,6 +18,7 @@ def isprime(self):
     for i in range(2, round(self ** 0.5) + 1):
         if self % i == 0:
             return False
+
     return True
 
 
